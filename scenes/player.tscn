@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cxnbk28knoavd"]
+[gd_scene load_steps=20 format=3 uid="uid://cxnbk28knoavd"]
 
 [ext_resource type="Texture2D" uid="uid://3mtbddctiiu0" path="res://art/Player/Edward_run_16x16.png" id="1_8pvoi"]
 
@@ -137,9 +137,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyil3"]
+size = Vector2(16, 23)
+
 [node name="Player" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yj478")
 animation = &"walk_down"
-frame_progress = 0.871325
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_cyil3")
