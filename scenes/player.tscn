@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://cxnbk28knoavd"]
+[gd_scene load_steps=21 format=3 uid="uid://cxnbk28knoavd"]
 
 [ext_resource type="Texture2D" uid="uid://3mtbddctiiu0" path="res://art/Player/Edward_run_16x16.png" id="1_8pvoi"]
+[ext_resource type="Script" path="res://scripts/player.cs" id="1_xvwb2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq3lb"]
 atlas = ExtResource("1_8pvoi")
@@ -141,6 +142,7 @@ animations = [{
 size = Vector2(16, 23)
 
 [node name="Player" type="Area2D"]
+script = ExtResource("1_xvwb2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yj478")
