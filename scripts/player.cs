@@ -19,22 +19,22 @@ public partial class player : Area2D
 		var velocity = Vector2.Zero; // Players movement vector.
 		if(Input.IsActionJustPressed("move_up"))
 		{
-			velocity.Y += 1;
+			velocity.Y -= 1;
 		}
 
 		if(Input.IsActionJustPressed("move_down"))
 		{
-			velocity.Y -= 1;
+			velocity.Y += 1;
 		}
 		
 		if(Input.IsActionJustPressed("move_right"))
 		{
-			velocity.Y += 1;
+			velocity.X += 1;
 		}
 
 		if(Input.IsActionJustPressed("move_left"))
 		{
-			velocity.Y -= 1;
+			velocity.X -= 1;
 		}
 
 		var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
